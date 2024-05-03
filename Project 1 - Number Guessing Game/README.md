@@ -21,9 +21,11 @@ This Python script implements a simple number guessing game where the user has t
 ### How to Use
 
 1. Clone the repository or download the Python script.
-2. Run the script using Python 3.x.
-3. Enter the desired number of rounds when prompted.
-4. Follow the instructions to guess the random number within the specified rounds.
+   ```
+   https://github.com/JawadSher/Python-Projects-Beginner-to-Advance/tree/main/Project%201%20-%20Number%20Guessing%20Game
+3. Run the script using Python 3.x.
+4. Enter the desired number of rounds when prompted.
+5. Follow the instructions to guess the random number within the specified rounds.
 
 Enjoy playing the number guessing game!
 
