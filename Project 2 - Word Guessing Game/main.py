@@ -1,9 +1,10 @@
 import random
 
-userName = input("Please Enter Your Name : ")
-print(f'Welcome Mr. {userName}')
+def display_words(secret_words, guessed_words):
+    for word in secret_words:
+        if word in guessed_words:
+            print(word, end=" ")
+        else:
+            print("_", end=" ")
 
-words = ['rainbow', 'butterfly', 'windows', 'programming', 'python', 'geekforgeeks', 'mathematics', 'amazing', 'alon']
 
-word = random.choice(words)
-print(word)
