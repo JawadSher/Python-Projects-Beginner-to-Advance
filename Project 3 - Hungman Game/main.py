@@ -13,7 +13,7 @@ word_Category.update({word: 'animal' for word in animalList})
 wordList = fruitList + animalList
 word = random.choice(wordList)
 category = word_Category[word]
-print(word)
+
 if __name__ == '__main__':
 	print(f'Guess the word! : Hint - Category {category}')
 	
@@ -29,6 +29,7 @@ if __name__ == '__main__':
 	try:
 		while(rounds and flag == 0):
 			guess = input("Inter a letter : ")
+
 			if not guess.isalpha:
 				print("Only Alhpabetic Character Allowed")
 			if len(guess) != 1:
