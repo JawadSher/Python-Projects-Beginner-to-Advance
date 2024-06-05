@@ -17,6 +17,8 @@ This repository includes various Python projects:
 
 This repository contains a series of Python projects tailored to help beginners dive into Python programming and gradually advance their skills. Each project is carefully crafted to cover various aspects of Python programming, including basic syntax, data structures, algorithms, and popular libraries.
 
+<img src="https://bensstats.wordpress.com/wp-content/uploads/2020/08/zero-to-hero.gif?w=900">
+
 ## Installation
 
 To run these projects locally, follow these steps:
