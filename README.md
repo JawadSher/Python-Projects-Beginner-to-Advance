@@ -2,13 +2,16 @@
 Welcome to the Python Projects repository, where you can find a collection of Python-based programming projects designed to enhance your coding skills from beginner to advanced levels.
 
 ## Table of Contents
-  - [Project 1 - Number Guessing Game](#project-1---number-guessing-game)
-  - [Project 2 - Word Guessing Game](#project-2---word-guessing-game)
-  - [Project 3 - Hangman Game](#project-3---hangman-game)
-  - [Project 4 - Rock Paper Scissors](#project-4---rock-paper-scissors)
-  - [Project 5 - Taking Screenshot Application](#project-5---taking-screenshot-application)
-  - [Project 6 - Desktop Notifier](#project-6---desktop-notifier)
+This repository includes various Python projects:
 
+| Project Name                   | Description                           |
+|--------------------------------|---------------------------------------|
+| 1. [Number Guessing Game](https://github.com/JawadSher/Python-Projects-Beginner-to-Advance/tree/main/Project%201%20-%20Number%20Guessing%20Game)           | A game where players guess a number  |
+| 2. [Word Guessing Game](https://github.com/JawadSher/Python-Projects-Beginner-to-Advance/tree/main/Project%202%20-%20Word%20Guessing%20Game)             | A game where players guess a word    |
+| 3. [Hangman Game](https://github.com/JawadSher/Python-Projects-Beginner-to-Advance/tree/main/Project%203%20-%20Hungman%20Game)                     | The classic Hangman game implementation |
+| 4. [Rock Paper Scissors](https://github.com/JawadSher/Python-Projects-Beginner-to-Advance/tree/main/Project%204%20-%20Rock%20Paper%20Scissor)              | Digital version of the popular game  |
+| 5. [Taking Screenshot Application](https://github.com/JawadSher/Python-Projects-Beginner-to-Advance/tree/main/Project%205%20-%20Taking%20Screenshot%20Application)    | Application to capture desktop screenshots |
+| 6. [Desktop Notifier](https://github.com/JawadSher/Python-Projects-Beginner-to-Advance/tree/main/Project%206%20-%20Desktop%20Notifier)                 | Application for displaying desktop notifications |
 
 ## Introduction
 
