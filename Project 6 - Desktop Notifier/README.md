@@ -21,7 +21,6 @@ This Python script fetches news articles from various categories such as world, 
 ## Usage
 
 1. Clone the repository.
-2. Install required dependencies using `pip install -r requirements.txt`.
 3. Run the script using `python news_notifier.py`.
 4. Follow the on-screen instructions to select a news category.
 
