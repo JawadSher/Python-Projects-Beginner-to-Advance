@@ -1,13 +1,20 @@
+import os
+import json
 
-def addStudents(stnd_name, students_list):
-    students_list.add(stnd_name)
-    if stnd_name in students_list:
-        print("Student Add Temprory")
+def addStudent(stnd_name, roll_num, students_dict):
+    if roll_num in students_dict:
+        print(f"Roll number {roll_num} already exists for student {students_dict[roll_num]}.")
+    else:
+        students_dict[roll_num] = stnd_name
+        with open("Temprory.txt", "w") as file:
+            json.dump(students_dict, file)
+        file.close()
+        print("Student Added Temprorily")
 
-def allStudents(students_list):
+def allStudents(students_dict):
     print("----> Total Temprory Saved Students <----")
-    for stnd_num, student in enumerate(students_list, 1):
-        print(f"{stnd_num} - {students_list}")
+    for rollnum, student in students_dict.items():
+        print(f"{rollnum} - {student}")
 
 def addSubjects(subjt_name, subjects):
     subjects.add(subjt_name)
@@ -19,10 +26,7 @@ def allSubjects(subjects):
     for subj_num, subject in enumerate(subjects, 1):
         print(f"{subj_num} - {subject}")
 
-def currentData():
-    pass
-
-def AddDataRegister():
+def AddDataToRegister():
     pass
 
 def readRegister():
@@ -33,9 +37,8 @@ def editRegister(stnd_name):
 
 def main():
     print("======> Welcome to Attendence Management System <======")
-    print()
     
-    students = set()
+    students = {}
     subjects = set()
     is_running = True
 
@@ -55,11 +58,26 @@ def main():
         
         match user_selection:
             case 1:
-                student_name = input("Enter a Student Name : ")
-                addStudents(student_name, students)
+                case1 = True
+                while(case1):
+                    student_name = input("Enter a Student Name : ")
+                    if(student_name == "exit"):
+                        case1 = False
+                        break
+                    roll_num = int(input("Enter Roll Number : "))
+                    addStudent(student_name, roll_num, students)
+                    print("Type exit for Exiting")
+                    print("------------------------------")
             case 2:
-                subject_name = input("Enter a Subject Name : ")
-                addSubjects(subject_name, subjects)
+                case2 = True
+                while case2:
+                    subject_name = input("Enter a Subject Name : ")
+                    if(subject_name == 'exit'):
+                        case2 = False
+                        break
+                    addSubjects(subject_name, subjects)
+                    print("Type exit of Exiting")
+                    print("------------------------------")
             case 3:
                 allStudents(students)
             case 4:
