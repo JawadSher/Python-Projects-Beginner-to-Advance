@@ -13,6 +13,7 @@ This repository includes various Python projects:
 | 5. [Taking Screenshot Application](https://github.com/JawadSher/Python-Projects-Beginner-to-Advance/tree/main/Project%205%20-%20Taking%20Screenshot%20Application)    | Application to capture desktop screenshots |
 | 6. [Desktop Notifier](https://github.com/JawadSher/Python-Projects-Beginner-to-Advance/tree/main/Project%206%20-%20Desktop%20Notifier)                 | Application for displaying desktop notifications |
 | 7. [Get Live Weather Desktop Notifications](https://github.com/JawadSher/Python-Projects-Beginner-to-Advance/tree/main/Project%207%20-%20Get%20Live%20Weather%20Desktop%20Notifications) | Application for fetching Latest Weather Updates & Display through Desktop Notifications |
+| 8. [Python Keyloger](https://github.com/JawadSher/Python-Projects-Beginner-to-Advance/tree/main/Project%208%20-%20Python%20Keyloger) | Capturing the client keyboard keys |
 
 ## Introduction
 
