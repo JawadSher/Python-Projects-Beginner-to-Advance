@@ -73,8 +73,40 @@ def createRegister(students_dict, subjects_set):
         wb.save(file_name)
         print(f'Register create and saved as {file_name}')
     elif(userChoice == 2):
-        pass
+        save_as = input("Enter Register Name : ")
+        Month = input("Enter a Month Name : ")
+        Year = int(input("Enter Year : "))
+        wb = Workbook()
+        sheet = wb.active
+        sheet.title = f"{Month}-{Year}"
 
+        print("---> Write Data into Register <---")
+        print("Default Target Cell 1 at Col-1, Row-1")
+        print("Type exit for Exiting")
+        loopRun = True
+        while loopRun:
+            print("Select a Cell Example : A1, B2, C3....Z - A,B,C for Columns, 1,2,3,4.... for Rows. When Exceed Z then AA, BB, CC for Columns \n")
+            print("""
+            +----+----+----+----+----+----+----+----+----+----+----+
+            | 1  | A1 | B1 | C1 | D1 | E1 | F1 | G1 | H1 | ...| Z1 |
+            +----+----+----+----+----+----+----+----+----+----+----+
+            | 2  | A2 | B2 | C2 | D2 | E2 | F2 | G2 | H2 | ...| Z2 |
+            +----+----+----+----+----+----+----+----+----+----+----+
+            | 3  | A3 | B3 | C3 | D3 | E3 | F3 | G3 | H3 | ...| Z3 |
+            +----+----+----+----+----+----+----+----+----+----+----+
+            | 4  | A4 | B4 | C4 | D4 | E4 | F4 | G4 | H4 | ...| Z4 |
+            +----+----+----+----+----+----+----+----+----+----+----+
+            | 5  | A5 | B5 | C5 | D5 | E5 | F5 | G5 | H5 | ...| Z5 |
+            +----+----+----+----+----+----+----+----+----+----+----+
+            """)
+
+            cell = input("Enter a Cell Position : ")
+            data = input("Enter a your data : ")
+            if(cell == 'exit' or data == 'exit'):
+                loopRun = False
+            else:
+                sheet[cell] = data
+                wb.save(f"{save_as}.xlsx")
 
 def AddDataToRegister():
     pass
