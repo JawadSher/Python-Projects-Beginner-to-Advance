@@ -1,5 +1,9 @@
 import os
 import json
+from openpyxl import Workbook
+from openpyxl.styles import Font, Alignment
+import time
+import calendar
 
 def addStudent(stnd_name, roll_num, students_dict):
     if roll_num in students_dict:
@@ -26,6 +30,52 @@ def allSubjects(subjects):
     for subj_num, subject in enumerate(subjects, 1):
         print(f"{subj_num} - {subject}")
 
+def createRegister(students_dict, subjects_set):
+    print("1. Create Default Register")
+    print("2. Create Dynamic Register")
+
+    userChoice = int(input("Enter your choice : "))
+    if(userChoice == 1):
+        TIME = time.localtime()
+        formated_time = time.strftime("%B-%Y", TIME)
+        year = time.strftime("%Y", TIME)
+        month = time.strftime("%m", TIME)
+        total_days = calendar.monthrange(int(year), int(month))[1]
+
+        wb = Workbook()
+        sheet = wb.active
+        sheet.title = formated_time
+        col_headers = ['Roll no', 'Name']
+
+        col_headers.extend([str(day) for day in range(1, total_days + 1)])
+        for col_num, header in enumerate(col_headers, 1):
+            sheet.cell(row=1, column=col_num, value=header)
+
+        if len(subjects_set) == 0:
+            print("Please Add Subjects First")
+        else:
+            base_subjects = []
+            for subject in subjects_set:
+                base_subjects.append(subject)
+
+        subjects = ['Subject', '']
+        while len(subjects) - 2 <= total_days:
+            subjects.extend(base_subjects)
+        subjects = subjects[:total_days+2]
+        for col_num, subject in enumerate(subjects, 1):
+            sheet.cell(row=2, column=col_num, value=subject)
+
+        for row_num, (roll_no, name) in enumerate(students_dict.items(), start=3):
+            sheet.cell(row=row_num, column=1, value=roll_no)
+            sheet.cell(row=row_num, column=2, value=name)
+
+        file_name = "Attendence_Register.xlsx"
+        wb.save(file_name)
+        print(f'Register create and saved as {file_name}')
+    elif(userChoice == 2):
+        pass
+
+
 def AddDataToRegister():
     pass
 
@@ -48,10 +98,11 @@ def main():
         print("2 - Add Subjects Temprory")
         print("3 - Show Total Temprory Students")
         print("4 - Show Total Temprory Subjects")
-        print("5 - Add All Students & Subjects to Register Permenantly")
-        print("6 - Read Class Attendence Register")
-        print("7 - Edit Attendence Register")
-        print("8 - Exit")
+        print("5 - Create Attendence Register")
+        print("6 - Add All Students & Subjects to Register Permenantly")
+        print("7 - Read Class Attendence Register")
+        print("8 - Edit Attendence Register")
+        print("9 - Exit")
         print()
 
         user_selection = int(input("Enter a Number : "))
@@ -83,12 +134,14 @@ def main():
             case 4:
                 allSubjects(subjects)
             case 5:
-                AddDataRegister()
+                createRegister(students, subjects)
             case 6:
-                readRegister()
+                AddDataRegister()
             case 7:
-                editRegister()
+                readRegister()
             case 8:
+                editRegister()
+            case 9:
                 is_running = False
             case _:
                 print("Invalid Input")
