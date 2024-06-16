@@ -2,6 +2,7 @@ import os
 import json
 from openpyxl import Workbook
 from openpyxl.styles import Font, Alignment
+from openpyxl import load_workbook
 import time
 import calendar
 
@@ -108,14 +109,56 @@ def createRegister(students_dict, subjects_set):
                 sheet[cell] = data
                 wb.save(f"{save_as}.xlsx")
 
-def AddDataToRegister():
-    pass
-
 def readRegister():
-    pass
+    rgstr_name = input("Enter your Register Name : ")
+    wb = load_workbook(f"{rgstr_name}.xlsx")
+    sheet = wb.active
+    for values in sheet.iter_rows(values_only=True):
+        print(values)
 
-def editRegister(stnd_name):
-    pass
+def editRegister():
+    rgstr_name = input("Enter your register Name : ")
+    wb = load_workbook(f"./{rgstr_name}.xlsx")
+    sheet = wb.active
+    print("1. Deleting Rows & Columns")
+    print("2. Merging & Unmerging Cells")
+    print("3. Inserting Rows & Columns")
+    print("4. Add Data to Specific Cell")
+
+    match rgstr_name:
+        case 1:
+            print("1. Delete Rows")
+            print("2. Delete Columns")
+            select_opt = int(input("Select one of them"))
+            if(select_opt == 1):
+                del_row = int(input("Enter a row Position to Delete :"))
+                if(del_row in sheet.rows):
+                    sheet.delete_rows(del_row)
+                else:
+                    print('Invalid Row')
+            elif(select_opt == 2):
+                del_cols = int(input("Enter a Col Position to Delete :"))
+                if(del_cols in sheet.columns):
+                    sheet.delete_cols(del_cols)
+                else:
+                    print('Invalid Row')
+            else:
+                print("Invalid Option Entered")
+        case 2:
+            print("Cells Position Example : A1:B1 to merge & Unmerge")
+            print("1. Merge Cells")
+            print("2. UnMerge Cells")
+            select_opt = int(input("Select option one of them : "))
+            if(select_opt == 1):
+                select_cell = input("Select Cell 1")
+                select_cell2 = input("Select Cell 2")
+                if(select_cell in sheet._cells and select_cell2 in sheet._cells):
+                    sheet.merge_cells(f"{select_cell}:{select_cell2}")
+        case 3:
+            pass
+        case 4:
+            pass
+
 
 def main():
     print("======> Welcome to Attendence Management System <======")
@@ -131,10 +174,9 @@ def main():
         print("3 - Show Total Temprory Students")
         print("4 - Show Total Temprory Subjects")
         print("5 - Create Attendence Register")
-        print("6 - Add All Students & Subjects to Register Permenantly")
-        print("7 - Read Class Attendence Register")
-        print("8 - Edit Attendence Register")
-        print("9 - Exit")
+        print("6 - Read Class Attendence Register")
+        print("7 - Edit Attendence Register")
+        print("8 - Exit")
         print()
 
         user_selection = int(input("Enter a Number : "))
@@ -168,12 +210,10 @@ def main():
             case 5:
                 createRegister(students, subjects)
             case 6:
-                AddDataRegister()
-            case 7:
                 readRegister()
-            case 8:
+            case 7:
                 editRegister()
-            case 9:
+            case 8:
                 is_running = False
             case _:
                 print("Invalid Input")
