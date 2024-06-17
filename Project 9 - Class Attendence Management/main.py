@@ -129,36 +129,92 @@ def editRegister():
         case 1:
             print("1. Delete Rows")
             print("2. Delete Columns")
-            select_opt = int(input("Select one of them"))
+            select_opt = int(input("Select one of them : "))
             if(select_opt == 1):
-                del_row = int(input("Enter a row Position to Delete :"))
-                if(del_row in sheet.rows):
+                del_row = int(input("Enter a row number to Delete : "))
+                if(1 <= del_row <= sheet.max_row):
                     sheet.delete_rows(del_row)
+                    print("Row Deleted Successfully.")
+                    wb.save(f"./{rgstr_name}.xlsx")
                 else:
-                    print('Invalid Row')
+                    print('Row not found !!!')
             elif(select_opt == 2):
-                del_cols = int(input("Enter a Col Position to Delete :"))
-                if(del_cols in sheet.columns):
+                del_cols = int(input("Enter a Col Position to Delete : "))
+                if(1 <= del_cols <= sheet.max_column):
                     sheet.delete_cols(del_cols)
+                    print("Column Deleted Successfully.")
+                    wb.save(f"./{rgstr_name}.xlsx")
                 else:
-                    print('Invalid Row')
+                    print('Column not found !!!')
             else:
-                print("Invalid Option Entered")
+                print("Option Not Exist !!!")
         case 2:
             print("Cells Position Example : A1:B1 to merge & Unmerge")
             print("1. Merge Cells")
             print("2. UnMerge Cells")
             select_opt = int(input("Select option one of them : "))
             if(select_opt == 1):
-                select_cell = input("Select Cell 1")
+                select_cell1 = input("Select Cell 1")
                 select_cell2 = input("Select Cell 2")
-                if(select_cell in sheet._cells and select_cell2 in sheet._cells):
-                    sheet.merge_cells(f"{select_cell}:{select_cell2}")
-        case 3:
-            pass
-        case 4:
-            pass
+                
+                cell1 = sheet[select_cell1]
+                cell2 = sheet[select_cell2]
 
+                if cell1.coordinate and cell2.coordinate:
+                    sheet.merge_cells(f"{select_cell1}:{select_cell2}")
+                    print("Cells Murged Succesfully.")
+                else:
+                    print("One or Both cells or not valid !!!")
+            elif(select_opt == 2):
+                select_cell1 = input("Select Cell 1")
+                select_cell2 = input("Select Cell 2")
+                
+                cell1 = sheet[select_cell1]
+                cell2 = sheet[select_cell2]
+
+                if cell1.coordinate and cell2.coordinate:
+                    sheet.unmerge_cells(f"{select_cell1}:{select_cell2}")
+                    print("Cells Un-murged Succesfully.")
+                else:
+                    print("One or Both cells or not valid !!!")
+            else:
+                print("Option Not Exist !!!")
+        case 3:
+            print("Inserting Rows & Columns by Intering Positions.")
+            print("1. Inserting Rows")
+            print("2. Inserting Columns")
+            userInput = int(input("Select option one of them : "))
+            if(userInput == 1):
+                insert_row = int(input("Enter a Position to Insert Row : "))
+                if(insert_row > sheet.max_row+1):
+                    print(f"Total Rows exist in Sheet is : {sheet.max_row}")
+                else:
+                    sheet.insert_rows(insert_row)
+                    print("Row Inserted Successfully.")
+                    wb.save(f"./{rgstr_name}.xlsx")
+            elif(userInput == 2):
+                insert_col = int(input("Enter a Position to Insert Column : "))
+                if(insert_col > sheet.max_row+1):
+                    print(f"Total Cols exist in Sheet is : {sheet.max_row}")
+                else:
+                    sheet.insert_cols(insert_col)
+                    print("Column Inserted Successfully.")
+                    wb.save(f"./{rgstr_name}.xlsx")
+            else:
+                print("Option Not Exist !!!")
+        case 4:
+            print("Insert Values to Specific Cell Example : A5, B5, C1...")
+            input_cell = input("Enter a Cell Position : ")
+            input_data = input("Enter a value to Insert : ")
+            cell = sheet[input_cell]
+            if cell.coordinate:
+                sheet[input_cell] = input_data
+                print("Value Inserting Successfully.")
+                wb.save(f"./{rgstr_name}.xlsx")
+            else:
+                print("Cell Not found !!!")
+        case _:
+            print("Option Does not exist !!!")
 
 def main():
     print("======> Welcome to Attendence Management System <======")
