@@ -216,6 +216,37 @@ def editRegister():
         case _:
             print("Option Does not exist !!!")
 
+    def check_attendence():
+        print("Checking.... Total Attendence")
+        register = input("Enter a name of Register : ")
+        wb = load_workbook(f"{register}.xlsx")
+        sheet = wb.active
+        attendence_data = {}
+
+        for row in sheet.iter_rows(min_row=3, values_only=True):
+            roll_number = row[0]
+            student_name = row[1]
+            attendence_status = {}
+
+            for idx, status in enumerate(row[2:], start=3):
+                column_letter = openpyxl.utils.get_column_letter(idx)
+                if status == 'y' or status == 'Y':
+                    attendence_status[column_letter] = "Present"
+                elif status == 'a' or status == 'A':
+                    attendence_status[column_letter] = "Absent"
+                else:
+                    print("Empty Cells !!!")
+                
+            attendence_data[roll_number] = {
+                "name" : user_name,
+                "status": attendence_status
+            }
+        
+        for roll_number, data in attendence_data.items():
+            print(f"Roll No :{roll_number}, Name :{data['name']}")
+            for data, status in data['status'].items():
+                print(f' Date Column {date}: {status}')
+
 def main():
     print("======> Welcome to Attendence Management System <======")
     
@@ -232,7 +263,8 @@ def main():
         print("5 - Create Attendence Register")
         print("6 - Read Class Attendence Register")
         print("7 - Edit Attendence Register")
-        print("8 - Exit")
+        print("8 - Check Attedence in the end of Month")
+        print("9 - Exit")
         print()
 
         user_selection = int(input("Enter a Number : "))
@@ -270,6 +302,8 @@ def main():
             case 7:
                 editRegister()
             case 8:
+                check_attendence()
+            case 9:
                 is_running = False
             case _:
                 print("Invalid Input")
