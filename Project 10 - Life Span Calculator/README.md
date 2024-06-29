@@ -24,7 +24,7 @@ The Life Span Calculator is a web application that allows users to input their d
 
 1.  Clone the repository:
     
-    `git clone https://github.com/your_username/life-span-calculator.git
+    `git clone https://github.com/JawadSher/Python-Projects-Beginner-to-Advance/tree/main/Project%2010%20-%20Life%20Span%20Calculator
     cd life-span-calculator` 
     
 2.  Install the required dependencies:
