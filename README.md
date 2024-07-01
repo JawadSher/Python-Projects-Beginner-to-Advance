@@ -15,7 +15,8 @@ This repository includes various Python projects:
 | 7. [Get Live Weather Desktop Notifications](https://github.com/JawadSher/Python-Projects-Beginner-to-Advance/tree/main/Project%207%20-%20Get%20Live%20Weather%20Desktop%20Notifications) | Application for fetching Latest Weather Updates & Display through Desktop Notifications |
 | 8. [Python Keyloger](https://github.com/JawadSher/Python-Projects-Beginner-to-Advance/tree/main/Project%208%20-%20Python%20Keyloger) | Capturing the client keyboard keys |
 | 9. [Attendence Management System](https://github.com/JawadSher/Python-Projects-Beginner-to-Advance/tree/main/Project%209%20-%20Class%20Attendence%20Management) | Basic Attendence Management System for School Classes |
-| 10. [Life Span Calculator](https://github.com/JawadSher/Python-Projects-Beginner-to-Advance/tree/main/Project%2010%20-%20Life%20Span%20Calculator) | A basic project by using the PyWebIO framework to build web app to calculate person total age span.
+| 10. [Life Span Calculator](https://github.com/JawadSher/Python-Projects-Beginner-to-Advance/tree/main/Project%2010%20-%20Life%20Span%20Calculator) | A basic project by using the PyWebIO framework to build web app to calculate person total age span. |
+| 11. [Python Code Editor](https://github.com/JawadSher/Python-Projects-Beginner-to-Advance/tree/main/Project%2011%20-%20Python%20Code%20Editor) | A Python Code Editor web application Built with PyWebIO framework. |
 
 ## Introduction
 
