@@ -17,6 +17,7 @@ This repository includes various Python projects:
 | 9. [Attendence Management System](https://github.com/JawadSher/Python-Projects-Beginner-to-Advance/tree/main/Project%209%20-%20Class%20Attendence%20Management) | Basic Attendence Management System for School Classes |
 | 10. [Life Span Calculator](https://github.com/JawadSher/Python-Projects-Beginner-to-Advance/tree/main/Project%2010%20-%20Life%20Span%20Calculator) | A basic project by using the PyWebIO framework to build web app to calculate person total age span. |
 | 11. [Python Code Editor](https://github.com/JawadSher/Python-Projects-Beginner-to-Advance/tree/main/Project%2011%20-%20Python%20Code%20Editor) | A Python Code Editor web application Built with PyWebIO framework. |
+| 12. [File Encryptor - Decryptor](https://github.com/JawadSher/Python-Projects-Beginner-to-Advance/tree/main/Project%2012%20-%20File%20Encryptor%20Decryptor) | A Python project that securely encrypts and decrypts files using the cryptography.fernet library.
 
 ## Introduction
 
