@@ -128,4 +128,6 @@ def store_products():
     )
     table = Table(templete, style=style)
     pdf.build([title, table])
-store_products()
+
+if __name__ == '__main__':
+    store_products()
