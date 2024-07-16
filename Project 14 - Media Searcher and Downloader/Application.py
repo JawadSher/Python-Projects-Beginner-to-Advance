@@ -4,16 +4,17 @@ from __modules__.youtube_Media_Downloader import downloadMedia
 import asyncio
 
 
-async def media_search():
-    media_search()
+# async def media_search():
+#     media_search()
 
-async def Download_Media():
-    downloadMedia()
+# async def Download_Media():
+#     downloadMedia()
 
 async def main():
-    app_header()
+    # app_header()
+    downloadMedia()
     # await media_search()
-    await downloadMedia()
-    
+    # await downloadMedia()
+
 if __name__ == '__main__':
     asyncio.run(main())

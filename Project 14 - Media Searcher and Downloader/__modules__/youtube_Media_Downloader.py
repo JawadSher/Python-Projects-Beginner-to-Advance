@@ -1,6 +1,7 @@
 import yt_dlp
 import os
 import argparse
+from win10toast import ToastNotifier
 
 def get_default_dir():
     return os.path.join(os.path.expanduser('~'), "Downloads")
@@ -10,35 +11,19 @@ def download_media(url, save_to=None, resolution=None):
         save_to = get_default_dir()
 
     if not os.path.exists(save_to):
-        os.mkdir(save_to)
+        os.mkdir(save_to, exist_ok=True)
 
     ydl_opts = {
         'outtmpl': os.path.join(save_to, '%(title)s.%(ext)s'),  # Output path and filename template
+        'format': 'bestvideo[height<=?{0}]+bestaudio/best[height<=?{0}]'.format(resolution or '1080')
     }
 
     try:
         with yt_dlp.YoutubeDL(ydl_opts) as ydl:
             info_dict = ydl.extract_info(url, download=True)
-            formats = info_dict.get('formats', [])
-
-            selected_format = None
-
-            for format_item in formats:
-                if 'height' in format_item:
-                    if resolution and f'{resolution}p' in format_item.get('format_note', '').lower():
-                        selected_format = format_item
-                        break
-                    elif not resolution:
-                        selected_format = format_item
-
-            if selected_format:
-                print(f"Selected Resolution: {selected_format['format_note']}")
-                ydl_opts['format'] = selected_format['format_id']
-                ydl.download([url])
-                downloaded_file_path = os.path.join(save_to, f"{info_dict.get('title')}.mp4")
-                print(f"Download completed successfully. File saved to: {downloaded_file_path}")
-            else:
-                print("No suitable format found for the requested resolution.")
+            downloaded_file_path = os.path.join(save_to, f"{info_dict.get('title')}.mp4")
+            ToastNotifier().show_toast('Downloading Completed Successfully', f'File saved to : {downloaded_file_path}')
+            print(f"Download completed successfully. File saved to: {downloaded_file_path}")
 
             print('\n------------------------------Video Info------------------------------\n')
             print(f"Title: {info_dict.get('title')}")
