@@ -1,5 +1,6 @@
 import yt_dlp
 import os
+import argparse
 
 def get_default_dir():
     return os.path.join(os.path.expanduser('~'), "Downloads")
@@ -56,4 +57,3 @@ def downloadMedia():
     resolution = input("Enter desired resolution (e.g., 360p, 720p): ").strip()
     download_media(url, save_to, resolution)
 
-downloadMedia()
