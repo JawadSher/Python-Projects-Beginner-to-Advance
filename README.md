@@ -19,6 +19,7 @@ This repository includes various Python projects:
 | 11. [Python Code Editor](https://github.com/JawadSher/Python-Projects-Beginner-to-Advance/tree/main/Project%2011%20-%20Python%20Code%20Editor) | A Python Code Editor web application Built with PyWebIO framework. |
 | 12. [File Encryptor - Decryptor](https://github.com/JawadSher/Python-Projects-Beginner-to-Advance/tree/main/Project%2012%20-%20File%20Encryptor%20Decryptor) | A Python project that securely encrypts and decrypts files using the cryptography.fernet library.
 | 13. [Generating Payment Receipts](https://github.com/JawadSher/Python-Projects-Beginner-to-Advance/tree/main/Project%2013%20-%20Generating%20Payment%20Receipts) | This Python project generates product receipts after purchases and notifies users upon completion.
+| 14. [Media Searcher and Downloader](https://github.com/JawadSher/Python-Projects-Beginner-to-Advance/tree/main/Project%2014%20-%20Media%20Searcher%20and%20Downloader) | A Python application to search and download YouTube videos. It features a user-friendly CLI, allows resolution selection, and uses yt_dlp and pytube for efficient media handling.
 
 ## Introduction
 
