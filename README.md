@@ -1,31 +1,48 @@
 <h1 align='center'>P Y T H O N - P R O J E C T S</h1>
-Welcome to the Python Projects repository, where you can find a collection of Python-based programming projects designed to enhance your coding skills from beginner to advanced levels.
+
+<p align='center'>Welcome to the Python Projects repository, where you can find a collection of Python-based programming projects designed to enhance your coding skills from beginner to advanced levels.</p>
+
+<p align='center'>
+  <img src="https://img.shields.io/github/repo-size/JawadSher/Python-Projects-Beginner-to-Advance?color=brightgreen&style=plastic" alt="Repository Size">
+  <img src="https://img.shields.io/github/issues/JawadSher/Python-Projects-Beginner-to-Advance?color=blue&style=plastic" alt="Issues">
+  <img src="https://img.shields.io/github/issues-pr/JawadSher/Python-Projects-Beginner-to-Advance?color=orange&style=plastic" alt="Pull Requests">
+  <img src="https://img.shields.io/github/stars/JawadSher/Python-Projects-Beginner-to-Advance?color=yellow&style=plastic" alt="Stars">
+  <img src="https://img.shields.io/github/license/JawadSher/Python-Projects-Beginner-to-Advance?color=red&style=plastic" alt="License">
+  <img src="https://img.shields.io/github/forks/JawadSher/Python-Projects-Beginner-to-Advance?color=green&style=plastic" alt="Forks">
+  <img src="https://img.shields.io/github/contributors/JawadSher/Python-Projects-Beginner-to-Advance?color=blue&style=plastic" alt="Contributors">
+  <img src="https://img.shields.io/github/last-commit/JawadSher/Python-Projects-Beginner-to-Advance?color=orange&style=plastic" alt="Last Commit">
+  <img src="https://img.shields.io/github/languages/top/JawadSher/Python-Projects-Beginner-to-Advance?color=red&style=plastic" alt="Top Language">
+</p>
+
+
 
 ## Table of Contents
 This repository includes various Python projects:
 
-| Project Name                   | Description                           |
-|--------------------------------|---------------------------------------|
-| 1. [Number Guessing Game](https://github.com/JawadSher/Python-Projects-Beginner-to-Advance/tree/main/Project%201%20-%20Number%20Guessing%20Game)           | A game where players guess a number  |
-| 2. [Word Guessing Game](https://github.com/JawadSher/Python-Projects-Beginner-to-Advance/tree/main/Project%202%20-%20Word%20Guessing%20Game)             | A game where players guess a word    |
-| 3. [Hangman Game](https://github.com/JawadSher/Python-Projects-Beginner-to-Advance/tree/main/Project%203%20-%20Hungman%20Game)                     | The classic Hangman game implementation |
-| 4. [Rock Paper Scissors](https://github.com/JawadSher/Python-Projects-Beginner-to-Advance/tree/main/Project%204%20-%20Rock%20Paper%20Scissor)              | Digital version of the popular game  |
-| 5. [Taking Screenshot Application](https://github.com/JawadSher/Python-Projects-Beginner-to-Advance/tree/main/Project%205%20-%20Taking%20Screenshot%20Application)    | Application to capture desktop screenshots |
-| 6. [Desktop Notifier](https://github.com/JawadSher/Python-Projects-Beginner-to-Advance/tree/main/Project%206%20-%20Desktop%20Notifier)                 | Application for displaying desktop notifications |
-| 7. [Get Live Weather Desktop Notifications](https://github.com/JawadSher/Python-Projects-Beginner-to-Advance/tree/main/Project%207%20-%20Get%20Live%20Weather%20Desktop%20Notifications) | Application for fetching Latest Weather Updates & Display through Desktop Notifications |
-| 8. [Python Keyloger](https://github.com/JawadSher/Python-Projects-Beginner-to-Advance/tree/main/Project%208%20-%20Python%20Keyloger) | Capturing the client keyboard keys |
-| 9. [Attendence Management System](https://github.com/JawadSher/Python-Projects-Beginner-to-Advance/tree/main/Project%209%20-%20Class%20Attendence%20Management) | Basic Attendence Management System for School Classes |
-| 10. [Life Span Calculator](https://github.com/JawadSher/Python-Projects-Beginner-to-Advance/tree/main/Project%2010%20-%20Life%20Span%20Calculator) | A basic project by using the PyWebIO framework to build web app to calculate person total age span. |
-| 11. [Python Code Editor](https://github.com/JawadSher/Python-Projects-Beginner-to-Advance/tree/main/Project%2011%20-%20Python%20Code%20Editor) | A Python Code Editor web application Built with PyWebIO framework. |
-| 12. [File Encryptor - Decryptor](https://github.com/JawadSher/Python-Projects-Beginner-to-Advance/tree/main/Project%2012%20-%20File%20Encryptor%20Decryptor) | A Python project that securely encrypts and decrypts files using the cryptography.fernet library.
-| 13. [Generating Payment Receipts](https://github.com/JawadSher/Python-Projects-Beginner-to-Advance/tree/main/Project%2013%20-%20Generating%20Payment%20Receipts) | This Python project generates product receipts after purchases and notifies users upon completion.
-| 14. [Media Searcher and Downloader](https://github.com/JawadSher/Python-Projects-Beginner-to-Advance/tree/main/Project%2014%20-%20Media%20Searcher%20and%20Downloader) | A Python application to search and download YouTube videos. It features a user-friendly CLI, allows resolution selection, and uses yt_dlp and pytube for efficient media handling.
+| No | Project Name | Description |
+|----|----|----|
+| 1 | [Number Guessing Game](https://github.com/JawadSher/Python-Projects-Beginner-to-Advance/tree/main/Project%201%20-%20Number%20Guessing%20Game)           | A game where players guess a number  |
+| 2 | [Word Guessing Game](https://github.com/JawadSher/Python-Projects-Beginner-to-Advance/tree/main/Project%202%20-%20Word%20Guessing%20Game)             | A game where players guess a word    |
+| 3 | [Hangman Game](https://github.com/JawadSher/Python-Projects-Beginner-to-Advance/tree/main/Project%203%20-%20Hungman%20Game)                     | The classic Hangman game implementation |
+| 4 | [Rock Paper Scissors](https://github.com/JawadSher/Python-Projects-Beginner-to-Advance/tree/main/Project%204%20-%20Rock%20Paper%20Scissor)              | Digital version of the popular game  |
+| 5 | [Taking Screenshot Application](https://github.com/JawadSher/Python-Projects-Beginner-to-Advance/tree/main/Project%205%20-%20Taking%20Screenshot%20Application)    | Application to capture desktop screenshots |
+| 6 | [Desktop Notifier](https://github.com/JawadSher/Python-Projects-Beginner-to-Advance/tree/main/Project%206%20-%20Desktop%20Notifier)                 | Application for displaying desktop notifications |
+| 7 | [Get Live Weather Desktop Notifications](https://github.com/JawadSher/Python-Projects-Beginner-to-Advance/tree/main/Project%207%20-%20Get%20Live%20Weather%20Desktop%20Notifications) | Application for fetching Latest Weather Updates & Display through Desktop Notifications |
+| 8 | [Python Keyloger](https://github.com/JawadSher/Python-Projects-Beginner-to-Advance/tree/main/Project%208%20-%20Python%20Keyloger) | Capturing the client keyboard keys |
+| 9 | [Attendence Management System](https://github.com/JawadSher/Python-Projects-Beginner-to-Advance/tree/main/Project%209%20-%20Class%20Attendence%20Management) | Basic Attendence Management System for School Classes |
+| 10 | [Life Span Calculator](https://github.com/JawadSher/Python-Projects-Beginner-to-Advance/tree/main/Project%2010%20-%20Life%20Span%20Calculator) | A basic project by using the PyWebIO framework to build web app to calculate person total age span. |
+| 11 |  [Python Code Editor](https://github.com/JawadSher/Python-Projects-Beginner-to-Advance/tree/main/Project%2011%20-%20Python%20Code%20Editor) | A Python Code Editor web application Built with PyWebIO framework. |
+| 12 | [File Encryptor - Decryptor](https://github.com/JawadSher/Python-Projects-Beginner-to-Advance/tree/main/Project%2012%20-%20File%20Encryptor%20Decryptor) | A Python project that securely encrypts and decrypts files using the cryptography.fernet library.
+| 13 | [Generating Payment Receipts](https://github.com/JawadSher/Python-Projects-Beginner-to-Advance/tree/main/Project%2013%20-%20Generating%20Payment%20Receipts) | This Python project generates product receipts after purchases and notifies users upon completion.
+| 14 | [Media Searcher and Downloader](https://github.com/JawadSher/Python-Projects-Beginner-to-Advance/tree/main/Project%2014%20-%20Media%20Searcher%20and%20Downloader) | A Python application to search and download YouTube videos. It features a user-friendly CLI, allows resolution selection, and uses yt_dlp and pytube for efficient media handling.
 
 ## Introduction
 
 This repository contains a series of Python projects tailored to help beginners dive into Python programming and gradually advance their skills. Each project is carefully crafted to cover various aspects of Python programming, including basic syntax, data structures, algorithms, and popular libraries.
 
-<img src="https://bensstats.wordpress.com/wp-content/uploads/2020/08/zero-to-hero.gif?w=900">
+<p align='center'>
+<img src="https://bensstats.wordpress.com/wp-content/uploads/2020/08/zero-to-hero.gif?w=900" >
+</p>
 
 ## Installation
 
