@@ -1,7 +1,5 @@
 <h1 align='center'>P Y T H O N - P R O J E C T S</h1>
 
-<p align='center'>Welcome to the Python Projects repository, where you can find a collection of Python-based programming projects designed to enhance your coding skills from beginner to advanced levels.</p>
-
 <p align='center'>
   <img src="https://img.shields.io/github/repo-size/JawadSher/Python-Projects-Beginner-to-Advance?color=brightgreen&style=plastic" alt="Repository Size">
   <img src="https://img.shields.io/github/issues/JawadSher/Python-Projects-Beginner-to-Advance?color=blue&style=plastic" alt="Issues">
@@ -13,6 +11,9 @@
   <img src="https://img.shields.io/github/last-commit/JawadSher/Python-Projects-Beginner-to-Advance?color=orange&style=plastic" alt="Last Commit">
   <img src="https://img.shields.io/github/languages/top/JawadSher/Python-Projects-Beginner-to-Advance?color=red&style=plastic" alt="Top Language">
 </p>
+
+<p align='center'>Welcome to the Python Projects repository, where you can find a collection of Python-based programming projects designed to enhance your coding skills from beginner to advanced levels.</p>
+
 
 
 
